@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Catorze 27 Medium";
+    src: url("./fonts/Catorze27\ Style\ 1\ SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Resamitz";
+    src: url("./fonts/Resamitz_0048.otf");
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Catorze 27 Medium";
+    background-color: black;
+    color: white;
+}
+.nav-logo{
+    height: 2em;
+}
+
+.navbar{
+    /* background-color: black; */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 25px 25px black inset;
+    justify-content: space-between;
+}
+
+.bottom-nav{
+    position: fixed;
+    bottom: 0;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    width: 100%;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    padding: 1em 0.7em;
+}
+
+.carousel{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("./images/carousel1.avif");
+    background-size: cover;
+    background-position: center;
+    font-size: 2em;
+    /* padding: 0em 1em; */
+    box-shadow: 0px -10px 15px black inset;
+    transition: background-image 300ms ease-in-out;
+}
+
+.carousel-arrow{
+    width: 2em;
+    transform: scaleX(0.6);
+}
+
+.carousel-arrow:hover{
+    cursor: pointer;
+}
+
+.menu-options-container{
+    width: 40%;
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.menu-options{
+    border: 1px solid white;
+    padding: 0px 10px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    width: fit-content;
+    margin: 10px;
+    letter-spacing: 2px;
+    transition: 300ms;
+}
+
+.menu-options:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.menu{
+    width: 70%;
+    margin: auto;
+    border: 4px solid white;
+    outline: 2px solid white;
+    outline-offset: 3px;
+    margin-bottom: 6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+.title-underline{
+    width: 50%;
+    height: 1px;
+    background-color: white;
+}
+
+.title-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.menu-item-title{
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    padding: 0;
+}
+
+.menu-item-description{
+    font-family: "Resamitz";
+    margin-top: 0px;
+    margin-bottom: 1.5em;
+    padding: 0;
+}

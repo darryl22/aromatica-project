@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="./logos/logo.png" alt="logo" class="nav-logo">
+        <div>
+            <a href="#" class="nav-link">WELCOME</a>
+            <a href="#" class="nav-link">OUR STORY</a>
+            <a href="#" class="nav-link">HOURS & LOCATIONS</a>
+            <a href="#" class="nav-link">AROMATICA MENU</a>
+            <a href="#" class="nav-link">WEST VILLAGE MENU</a>
+            <a href="#" class="nav-link">RESERVATIONS</a>
+            <a href="#" class="nav-link">STORE</a>
+            <a href="#" class="nav-link">GIFT CARDS</a>
+            <a href="#" class="nav-link">AROMATICA BEVERLY HILLS</a>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <div>
+            <img src="./logos/facebook-app-symbol.png" alt="facebook" style="height: 1.2em; margin-left: 1em;">
+            <img src="./logos/instagram.png" alt="instagram" style="height: 1.2em; margin-left: 1em;">
+            <img src="./logos/spotify.png" alt="spotify" style="height: 1.2em; margin-left: 1em;">
+        </div>
+        <div>
+            <a href="#" class="nav-link">BRING DANTE HOME</a>
+            <a href="#" class="nav-link">COLLABORATIONS</a>
+            <a href="#" class="nav-link">POP-UPS</a>
+            <a href="#" class="nav-link">PRESS</a>
+            <a href="#" class="nav-link">CONTACTS</a>
+            <a href="#" class="nav-link">EVENTS</a>
+            <a href="#" class="nav-link">WORK WITH US</a>
+        </div>
+    </div>
+    <div class="carousel" id="carousel">
+        <div class="carousel-arrow" onclick="carouselSub()"><img src="./images/arrow-left.png" alt="leftarrow" style="height: 2em;"></div>
+        <h1 style="letter-spacing: 10px;">AROMATICA MENU</h1>
+        <div class="carousel-arrow" onclick="carouselAdd()"><img src="./images/arrow-right.png" alt="rightarrow" style="height: 2em;"></div>
+    </div>
+    <div class="menu-options-container">
+        <div class="menu-options">BRUNCH</div>
+        <div class="menu-options">FOOD A LA CARTE</div>
+        <div class="menu-options">SEASONAL COCKTAILS</div>
+        <div class="menu-options">NEGRONI SESSIONS</div>
+        <div class="menu-options">SIGNATURE COCKTAILS</div>
+        <div class="menu-options">BY THE GLASS</div>
+        <div class="menu-options">WINE BY THE BOTTLE</div>
+        <div class="menu-options">KIDS MENU</div>
+        <div class="menu-options">ADL STRATEGIC PLANNING & PERSONALIZATION</div>
+        <div class="menu-options">SPECIAL EVENTS MENU</div>
+        <div class="menu-options">SPECIAL EVENTS BRUNCH</div>
+    </div>
+    <p style="text-align: center; font-family: 'Resamitz'; margin-bottom: 2em;">Saturday, Sunday & public holidays served from 10am - 4pm</p>
+    <div class="menu">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">MENU</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+</body>
+<script>
+    carousel = document.getElementById("carousel")
+    carouselPosition = 1
+
+    function carouselAdd() {
+        carouselPosition += 1
+        if (carouselPosition > 11){
+            carouselPosition = 1
+        }
+        carousel.style.backgroundImage = `url('./images/carousel${carouselPosition}.avif')`
+    }
+
+    function carouselSub() {
+        carouselPosition -= 1
+        if (carouselPosition < 1) {
+            carouselPosition = 11
+        }
+        carousel.style.backgroundImage = `url('./images/carousel${carouselPosition}.avif')`
+    }
+</script>
+</html>
