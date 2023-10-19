@@ -20,11 +20,11 @@ body{
     color: white;
 }
 .nav-logo{
-    height: 2em;
+    height: 4em;
 }
 
 .navbar{
-    /* background-color: black; */
+    background-color: black;
     position: fixed;
     width: 100%;
     top: 0;
