@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="./logos/logo.png" alt="logo" class="nav-logo">
+        <div>
+            <a href="./index.html" class="nav-link">WELCOME</a>
+            <a href="./ourstory.html" class="nav-link">OUR STORY</a>
+            <a href="./locations.html" class="nav-link">HOURS & LOCATIONS</a>
+            <a href="./menu.html" class="nav-link">NAIROWUA MENU</a>
+            <a href="./reservations.html" class="nav-link">RESERVATIONS</a>
+            <a href="./store.html" class="nav-link">STORE</a>
+            <a href="./giftcards.html" class="nav-link">GIFT CARDS</a>
+            <a href="#" class="nav-link">AROMATICA BEVERLY HILLS</a>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <div>
+            <img src="./logos/facebook-app-symbol.png" alt="facebook" style="height: 1.2em; margin-left: 1em;">
+            <img src="./logos/instagram.png" alt="instagram" style="height: 1.2em; margin-left: 1em;">
+            <img src="./logos/spotify.png" alt="spotify" style="height: 1.2em; margin-left: 1em;">
+        </div>
+        <div>
+            <a href="#" class="nav-link">BRING DANTE HOME</a>
+            <a href="#" class="nav-link">COLLABORATIONS</a>
+            <a href="#" class="nav-link">POP-UPS</a>
+            <a href="#" class="nav-link">PRESS</a>
+            <a href="#" class="nav-link">CONTACTS</a>
+            <a href="#" class="nav-link">EVENTS</a>
+            <a href="#" class="nav-link">WORK WITH US</a>
+        </div>
+    </div>
+    <div class="carousel" id="carousel" style="background-image: url('./images/carousel1.avif');">
+        <div class="carousel-arrow" onclick="carouselSub()"><img src="./images/arrow-left.png" alt="leftarrow" style="height: 2em;"></div>
+        <h1 style="letter-spacing: 10px;">NAIROWUA MENU</h1>
+        <div class="carousel-arrow" onclick="carouselAdd()"><img src="./images/arrow-right.png" alt="rightarrow" style="height: 2em;"></div>
+    </div>
+    <div class="menu-options-container">
+        <div class="menu-options-section">
+            <h1>DAY MENU</h1>
+            <div class="menu-options" onclick="toggleMenu('brunch')">BRUNCH</div>
+            <div class="menu-options" onclick="toggleMenu('foodalacarte')">FOOD A LA CARTE</div>
+            <div class="menu-options" onclick="toggleMenu('seasonalcocktails')">SEASONAL COCKTAILS</div>
+            <div class="menu-options" onclick="toggleMenu('negronisessions')">NEGRONI SESSIONS</div>
+            <div class="menu-options" onclick="toggleMenu('signaturecocktails')">SIGNATURE COCKTAILS</div>
+        </div>
+        <div class="menu-options-section">
+            <h1>NIGHT MENU</h1>
+            <div class="menu-options" onclick="toggleMenu('bytheglass')">BY THE GLASS</div>
+            <div class="menu-options" onclick="toggleMenu('winebythebottle')">WINE BY THE BOTTLE</div>
+            <div class="menu-options" onclick="toggleMenu('kidsmenu')">KIDS MENU</div>
+            <div class="menu-options" onclick="toggleMenu('adl')">ADL STRATEGIC PLANNING & PERSONALIZATION</div>
+            <div class="menu-options" onclick="toggleMenu('specialeventsmenu')">SPECIAL EVENTS MENU</div>
+            <div class="menu-options" onclick="toggleMenu('specialeventsbrunch')">SPECIAL EVENTS BRUNCH</div>
+        </div>
+    </div>
+    <p style="text-align: center; font-family: 'Resamitz'; margin-bottom: 2em;">Saturday, Sunday & public holidays served from 10am - 4pm</p>
+    <div class="menu" id="brunch">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">BRUNCH</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="foodalacarte">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">FOOD A LA CARTE</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">ANTIPASTRI</p>
+        <p class="menu-item-description">
+            Salted marcona almonds 7 <br><br>
+            Marinated olives 8 <br><br>
+            Dante’s house made focaccia with fresh ricotta & salsa peperoncini 14 (gluten free focaccia available, can be made v) <br><br>
+            Salumi misti of mortadella, prosciutto San Daniele (aged 24 months), soppressata, coppa, house pickles & mixed marinated olives 38 (gf, df) <br><br>
+            Cheese board - mitica drunken goat, manchego, gorgonzola piccante, La Tur, taleggio, aged gouda. Served with honey, almonds, fig and grape cracker (choice of one 8, three 24 or the full board 47) <br><br>
+            Marinated Cantabrian anchovies, roasted pepper, olives & Ravida al limone olive oil 18 (df, can be made gf) <br><br>
+            Prosciutto & melone finished with Ravida extra virgin olive oil 23 (gf, df) <br><br>
+        </p>
+        <p class="menu-item-title">SALADS & APPETIZERS</p>
+        <p class="menu-item-description">
+            Dante’s signature burrata with slow roasted heirloom tomato, basil & toasted rye 24 (v)<br><br>
+            Italian antipasti salad with baby gem lettuce, roasted peppers, baby artichokes, sun dried tomatoes, olives, provolone & salame tossed in oregano vinaigrette 26 (gf, can be made df, v & vg)<br><br>
+            Iceberg salad with Dante dressing, avocado, shaved pecorino and crispy pancetta 23 (gf, can be made v, vg & df)<br><br>
+            Steak tartare with onion, capers & bone marrow dressing 26 (df)<br><br>
+            Steamed mussels in a spicy pomodoro & white wine served with lightly toasted onion & potato sourdough 25 (df, can be made gf)<br><br>
+            English cucumber, lemon dill vinaigrette, Meredith dairy feta and Pumpkin seeds 23 (can be made df)<br><br>
+            Shrimp on the shell with sourdough bread, garlic, mirasol chili butter and lime 28 (gf)<br><br>
+        </p>
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+    </div>
+    <div class="menu hidden" id="seasonalcocktails">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">SEASONAL COCKTAILS</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">AUTUMN 2023</p>
+        <p class="menu-item-description">calvados. lichiko saitel. macino ambrato. spiced pear liqueur. smoked mapple syrup. clove bitters 20</p>
+
+        <p class="menu-item-title">PEAR PIMM’S CUP</p>
+        <p class="menu-item-description">pimm's. mancino ambrato. su casa mezcal. clarified pear. apple cider vinegar. fever tree ginger beer 19</p>
+
+        <p class="menu-item-title">FIGS & CHANDON</p>
+        <p class="menu-item-description">hennessy fig infusion. italicus. benedictine. lustau amontillado. black walnut & angostura bitters. chandon sparkling wine 23</p>
+
+        <p class="menu-item-title">SU BIRRA</p>
+        <p class="menu-item-description">su casa mezcal. aperol. dry curacao. pineapple & yuzu juice. ginger. raspberry. peroni beer 19</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">spiced pear puree. prosecco. all spice 19</p>
+
+        <p class="menu-item-title">TEQUILA & APPLES</p>
+        <p class="menu-item-description">dobel diamante. calvados. alls pice dram. fluffy green apple juice 18</p>
+    </div>
+    <div class="menu hidden" id="negronisessions">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">NEGRONI SESSIONS</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="signaturecocktails">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">SIGNATURE COCKTAILS</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="bytheglass">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">BY THE GLASS</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="winebythebottle">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">WINE BY THE BOTTLE</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="kidsmenu">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">KIDS MENU</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="adl">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">ADL STRATEGIC PLANNING & PERSONALIZATION</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="specialeventsmenu">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">SPECIAL EVENTS MENU</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="specialeventsbrunch">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">SPECIAL EVENTS BRUNCH</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+</body>
+<script>
+    carousel = document.getElementById("carousel")
+    carouselPosition = 1
+
+    function carouselAdd() {
+        carouselPosition += 1
+        if (carouselPosition > 11){
+            carouselPosition = 1
+        }
+        carousel.style.backgroundImage = `url('./images/carousel${carouselPosition}.avif')`
+    }
+
+    function carouselSub() {
+        carouselPosition -= 1
+        if (carouselPosition < 1) {
+            carouselPosition = 11
+        }
+        carousel.style.backgroundImage = `url('./images/carousel${carouselPosition}.avif')`
+    }
+
+    function toggleMenu(menuid) {
+        menu = document.getElementsByClassName("menu")
+        for (let x = 0; x < menu.length; x++) {
+            if (menu[x].getAttribute("id") === menuid) {
+                menu[x].classList.remove("hidden")
+            } else {
+                menu[x].classList.add("hidden")
+            }
+        }
+    }
+</script>
+</html>

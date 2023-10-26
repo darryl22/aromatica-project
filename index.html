@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <title>Document</title>
+
+    <style>
+        .welcome-gallery-div{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4em;
+        }
+
+        .welcome-gallery{
+            width: 45%;
+            height: 2em;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
         <img src="./logos/logo.png" alt="logo" class="nav-logo">
         <div>
-            <a href="#" class="nav-link">WELCOME</a>
-            <a href="#" class="nav-link">OUR STORY</a>
-            <a href="#" class="nav-link">HOURS & LOCATIONS</a>
-            <a href="#" class="nav-link">AROMATICA MENU</a>
-            <a href="#" class="nav-link">WEST VILLAGE MENU</a>
-            <a href="#" class="nav-link">RESERVATIONS</a>
-            <a href="#" class="nav-link">STORE</a>
-            <a href="#" class="nav-link">GIFT CARDS</a>
+            <a href="./index.html" class="nav-link">WELCOME</a>
+            <a href="./ourstory.html" class="nav-link">OUR STORY</a>
+            <a href="./locations.html" class="nav-link">HOURS & LOCATIONS</a>
+            <a href="./menu.html" class="nav-link">NAIROWUA MENU</a>
+            <a href="./reservations.html" class="nav-link">RESERVATIONS</a>
+            <a href="./store.html" class="nav-link">STORE</a>
+            <a href="./giftcards.html" class="nav-link">GIFT CARDS</a>
             <a href="#" class="nav-link">AROMATICA BEVERLY HILLS</a>
         </div>
     </div>
@@ -37,67 +51,33 @@
             <a href="#" class="nav-link">WORK WITH US</a>
         </div>
     </div>
-    <div class="carousel" id="carousel">
-        <div class="carousel-arrow" onclick="carouselSub()"><img src="./images/arrow-left.png" alt="leftarrow" style="height: 2em;"></div>
-        <h1 style="letter-spacing: 10px;">AROMATICA MENU</h1>
-        <div class="carousel-arrow" onclick="carouselAdd()"><img src="./images/arrow-right.png" alt="rightarrow" style="height: 2em;"></div>
+    <div style="width: 100%; height: 100vh; margin-bottom: 4em;">
+        <iframe src="https://player.vimeo.com/video/372723713?title=0&byline=0&portrait=0&color=3a6774&autoplay=1&loop=1&background=1" frameborder="0" width="100%" height="100%" title="welcome video"></iframe>
     </div>
-    <div class="menu-options-container">
-        <div class="menu-options">BRUNCH</div>
-        <div class="menu-options">FOOD A LA CARTE</div>
-        <div class="menu-options">SEASONAL COCKTAILS</div>
-        <div class="menu-options">NEGRONI SESSIONS</div>
-        <div class="menu-options">SIGNATURE COCKTAILS</div>
-        <div class="menu-options">BY THE GLASS</div>
-        <div class="menu-options">WINE BY THE BOTTLE</div>
-        <div class="menu-options">KIDS MENU</div>
-        <div class="menu-options">ADL STRATEGIC PLANNING & PERSONALIZATION</div>
-        <div class="menu-options">SPECIAL EVENTS MENU</div>
-        <div class="menu-options">SPECIAL EVENTS BRUNCH</div>
+    <div style="width: 70%; margin: auto;">
+        <p style="font-family: 'Resamitz'; margin-bottom: 4em; text-align: center;">".....There’s a lot of love in everything Dante does. Love of service, love of professionalism, of style, of invention, of hospitality, of tradition, of fun. And, thus far, New York seems to love Dante right back.....”</p>
+        <p style="font-family: 'Resamitz'; margin-bottom: 4em; text-align: center;">Robert Simonson  - Punch & New York Times</p>
     </div>
-    <p style="text-align: center; font-family: 'Resamitz'; margin-bottom: 2em;">Saturday, Sunday & public holidays served from 10am - 4pm</p>
-    <div class="menu">
-        <div class="title-div">
-            <h1 style="margin-bottom: 5px;">MENU</h1>
-            <div class="title-underline"></div>
+    <h1 style="text-align: center;">FOLLOW US</h1>
+    <div class="welcome-gallery-div">
+        <div class="welcome-gallery">
+            <img src="./images/index/welcome1.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/index/welcome3.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/index/welcome5.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/index/welcome7.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/index/welcome9.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/index/welcome11.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/index/welcome13.avif" alt="" style="width: 100%; margin-bottom: 1em;">
         </div>
-        <p class="menu-item-title">DANTE’S GARIBALDI</p>
-        <p class="menu-item-description">campari & fluffy orange 15</p>
-
-        <p class="menu-item-title">SEASONAL BELLINI</p>
-        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
-
-        <p class="menu-item-title">AMALFI LIMONATA</p>
-        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
-
-        <p class="menu-item-title">SALTY DOG</p>
-        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
-
-        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
-        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
-
-        <p class="menu-item-title">BREAKFAST MARTINI</p>
-        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+        <div class="welcome-gallery">
+            <img src="./images/index/welcome2.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/index/welcome4.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/index/welcome6.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/index/welcome8.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/index/welcome10.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/index/welcome12.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/index/welcome14.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+        </div>
     </div>
 </body>
-<script>
-    carousel = document.getElementById("carousel")
-    carouselPosition = 1
-
-    function carouselAdd() {
-        carouselPosition += 1
-        if (carouselPosition > 11){
-            carouselPosition = 1
-        }
-        carousel.style.backgroundImage = `url('./images/carousel${carouselPosition}.avif')`
-    }
-
-    function carouselSub() {
-        carouselPosition -= 1
-        if (carouselPosition < 1) {
-            carouselPosition = 11
-        }
-        carousel.style.backgroundImage = `url('./images/carousel${carouselPosition}.avif')`
-    }
-</script>
 </html>

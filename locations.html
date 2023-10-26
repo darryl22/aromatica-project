@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+
+    <style>
+        .location-details{
+            width: 70%;
+            margin: auto;
+            margin-top: 4em;
+            display: flex;
+            gap: 2em;
+        }
+
+        .location-image{
+            background-image: url("images/locations/location-picture.avif");
+            background-size: cover;
+            background-position: center;
+            aspect-ratio: 2 / 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="./logos/logo.png" alt="logo" class="nav-logo">
+        <div>
+            <a href="./index.html" class="nav-link">WELCOME</a>
+            <a href="./ourstory.html" class="nav-link">OUR STORY</a>
+            <a href="./locations.html" class="nav-link">HOURS & LOCATIONS</a>
+            <a href="./menu.html" class="nav-link">NAIROWUA MENU</a>
+            <a href="./reservations.html" class="nav-link">RESERVATIONS</a>
+            <a href="./store.html" class="nav-link">STORE</a>
+            <a href="./giftcards.html" class="nav-link">GIFT CARDS</a>
+            <a href="#" class="nav-link">AROMATICA BEVERLY HILLS</a>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <div>
+            <img src="./logos/facebook-app-symbol.png" alt="facebook" style="height: 1.2em; margin-left: 1em;">
+            <img src="./logos/instagram.png" alt="instagram" style="height: 1.2em; margin-left: 1em;">
+            <img src="./logos/spotify.png" alt="spotify" style="height: 1.2em; margin-left: 1em;">
+        </div>
+        <div>
+            <a href="#" class="nav-link">BRING DANTE HOME</a>
+            <a href="#" class="nav-link">COLLABORATIONS</a>
+            <a href="#" class="nav-link">POP-UPS</a>
+            <a href="#" class="nav-link">PRESS</a>
+            <a href="#" class="nav-link">CONTACTS</a>
+            <a href="#" class="nav-link">EVENTS</a>
+            <a href="#" class="nav-link">WORK WITH US</a>
+        </div>
+    </div>
+    <div class="carousel" id="carousel" style="background-image: url('./images/locations/locations1.avif');">
+        <div class="carousel-arrow" onclick="carouselSub()"><img src="./images/arrow-left.png" alt="leftarrow" style="height: 2em;"></div>
+        <div class="carousel-arrow" onclick="carouselAdd()"><img src="./images/arrow-right.png" alt="rightarrow" style="height: 2em;"></div>
+    </div>
+    <div class="location-details">
+        <div style="width: 50%; text-align: center;">
+            <h1>HOURS & LOCATIONS</h1>
+            <p style="font-family: 'Resamitz'; text-decoration: underline;">
+                79-81 Macdougal St.,<br>
+                New York, NY 10012 <br>
+                (212) 982-5275 <br>
+            </p>
+            <p style="font-family: 'Resamitz';">
+                Join us at <span style="color: green;">Caffe Dante</span> on Macdougal Street for indoor & outdoor dining from 12pm weekdays & 10am Saturday and 
+                Sunday, serving food until 11 pm Sunday to Wednesday and 12 am Thursdays to Saturdays. Reservations are 
+                suggested (through Resy) and walk-ins are welcomed.
+            </p>
+            <p style="font-family: 'Resamitz'; font-style: italic;">79-81 Macdougal St, Greenwich Village, New York 10012</p>
+            <p style="font-family: 'Resamitz';">
+                <span style="text-decoration: underline;">Dante West Village</span>  offers indoor and outdoor seating daily from 10am to 12pm for breakfast and all day dining until 
+                12am Monday through Sunday. Brunch is served from 10am- 4pm on the weekends and public holidays, with dinner service 
+                commencing at 5pm Saturday and Sunday. Reservations for tables are suggested for breakfast, lunch and dinner 
+                (through Resy) and walk-ins are welcomed. We invite you to join us on a first come, first serve basis for cocktails 
+                at the bar. 
+            </p>
+            <p style="font-family: 'Resamitz';">551 Hudson St ( corner of Perry), West Village, New York 10014</p>
+        </div>
+        <div style="width: 50%;" class="location-image"></div>
+    </div>
+</body>
+<script>
+    carousel = document.getElementById("carousel")
+    carouselPosition = 1
+
+    function carouselAdd() {
+        carouselPosition += 1
+        if (carouselPosition > 2){
+            carouselPosition = 1
+        }
+        carousel.style.backgroundImage = `url('./images/locations/locations${carouselPosition}.avif')`
+    }
+
+    function carouselSub() {
+        carouselPosition -= 1
+        if (carouselPosition < 1) {
+            carouselPosition = 2
+        }
+        carousel.style.backgroundImage = `url('./images/locations/locations${carouselPosition}.avif')`
+    }
+</script>
+</html>
