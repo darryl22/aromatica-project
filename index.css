@@ -83,6 +83,7 @@ body{
     color: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 3em;
     margin-bottom: 2em;
 }

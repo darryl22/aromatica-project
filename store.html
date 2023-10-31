@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <title>Document</title>
+    <style>
+        .store-items-container{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 2em;
+            margin: 4em;
+        }
+
+        .store-items{
+            border: 1px solid white;
+        }
+
+        .store-image{
+            background-position: center;
+            background-size: cover;
+            aspect-ratio: 1 / 1;
+        }
+
+        .purchase-button{
+            border: 1px solid white;
+            padding: 10px 15px;
+            background-color: black;
+            color: white;
+            transition: 200ms;
+        }
+
+        .purchase-button:hover{
+            background-color: white;
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -18,6 +49,79 @@
             <a href="./store.html" class="nav-link">STORE</a>
             <a href="./giftcards.html" class="nav-link">GIFT CARDS</a>
             <a href="#" class="nav-link">AROMATICA BEVERLY HILLS</a>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <div>
+            <img src="./logos/facebook-app-symbol.png" alt="facebook" style="height: 1.2em; margin-left: 1em;">
+            <img src="./logos/instagram.png" alt="instagram" style="height: 1.2em; margin-left: 1em;">
+            <img src="./logos/spotify.png" alt="spotify" style="height: 1.2em; margin-left: 1em;">
+        </div>
+        <div>
+            <a href="#" class="nav-link">BRING DANTE HOME</a>
+            <a href="#" class="nav-link">COLLABORATIONS</a>
+            <a href="#" class="nav-link">POP-UPS</a>
+            <a href="#" class="nav-link">PRESS</a>
+            <a href="#" class="nav-link">CONTACTS</a>
+            <a href="#" class="nav-link">EVENTS</a>
+            <a href="#" class="nav-link">WORK WITH US</a>
+        </div>
+    </div>
+    <h1 style="text-align: center; margin-top: 4em;">STORE</h1>
+    <div class="store-items-container">
+        <div class="store-items">
+            <div class="store-image" style="background-image: url('./images/store/baguette.jpg');"></div>
+            <div style="margin: 1em;">
+                <h1>Baguette</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis porro vero veniam ducimus incidunt et ex provident sint dicta.</p>
+                <p style="margin-top: 2em; font-size: 1.2em;">KES 1500</p>
+                <button class="purchase-button">PURCASE</button>
+            </div>
+        </div>
+        <div class="store-items">
+            <div class="store-image" style="background-image: url('./images/store/bread.jpg');"></div>
+            <div style="margin: 1em;">
+                <h1>Bread</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis porro vero veniam ducimus incidunt et ex provident sint dicta.</p>
+                <p style="margin-top: 2em; font-size: 1.2em;">KES 1500</p>
+                <button class="purchase-button">PURCASE</button>
+            </div>
+        </div>
+        <div class="store-items">
+            <div class="store-image" style="background-image: url('./images/store/chilli.jpg');"></div>
+            <div style="margin: 1em;">
+                <h1>Chilli</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis porro vero veniam ducimus incidunt et ex provident sint dicta.</p>
+                <p style="margin-top: 2em; font-size: 1.2em;">KES 1500</p>
+                <button class="purchase-button">PURCASE</button>
+            </div>
+        </div>
+        <div class="store-items">
+            <div class="store-image" style="background-image: url('./images/store/coffee.jpg');"></div>
+            <div style="margin: 1em;">
+                <h1>Coffee</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis porro vero veniam ducimus incidunt et ex provident sint dicta.</p>
+                <p style="margin-top: 2em; font-size: 1.2em;">KES 1500</p>
+                <button class="purchase-button">PURCASE</button>
+            </div>
+        </div>
+        <div class="store-items">
+            <div class="store-image" style="background-image: url('./images/store/naan.jpg');"></div>
+            <div style="margin: 1em;">
+                <h1>Naan Bread</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis porro vero veniam ducimus incidunt et ex provident sint dicta.</p>
+                <p style="margin-top: 2em; font-size: 1.2em;">KES 1500</p>
+                <button class="purchase-button">PURCASE</button>
+            </div>
+        </div>
+        <div class="store-items">
+            <div class="store-image" style="background-image: url('./images/store/tea.jpg');"></div>
+            <div style="margin: 1em;">
+                <h1>Tea</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis porro vero veniam ducimus incidunt et ex provident sint dicta.</p>
+                <p style="margin-top: 2em; font-size: 1.2em;">KES 1500</p>
+                <button class="purchase-button">PURCASE</button>
+            </div>
         </div>
     </div>
 </body>
