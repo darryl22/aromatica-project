@@ -51,15 +51,361 @@
             <a href="#" class="nav-link">WORK WITH US</a>
         </div>
     </div>
-    <div style="width: 100%; height: 100vh; margin-bottom: 4em;">
-        <iframe src="https://player.vimeo.com/video/372723713?title=0&byline=0&portrait=0&color=3a6774&autoplay=1&loop=1&background=1" frameborder="0" width="100%" height="100%" title="welcome video"></iframe>
+    <div class="carousel" id="carousel" style="background-image: url('./images/carousel1.avif');">
+        <div class="carousel-arrow" onclick="carouselSub()"><img src="./images/arrow-left.png" alt="leftarrow" style="height: 2em;"></div>
+        <!-- <h1 style="letter-spacing: 10px;">NAIROWUA MENU</h1> -->
+        <div class="carousel-arrow" onclick="carouselAdd()"><img src="./images/arrow-right.png" alt="rightarrow" style="height: 2em;"></div>
     </div>
-    <div style="width: 70%; margin: auto;">
-        <p style="font-family: 'Resamitz'; margin-bottom: 4em; text-align: center;">".....There’s a lot of love in everything Dante does. Love of service, love of professionalism, of style, of invention, of hospitality, of tradition, of fun. And, thus far, New York seems to love Dante right back.....”</p>
-        <p style="font-family: 'Resamitz'; margin-bottom: 4em; text-align: center;">Robert Simonson  - Punch & New York Times</p>
+    <div class="menu-options-container">
+        <div class="menu-options-section">
+            <h1>MENUS</h1>
+            <div class="menu-options" onclick="toggleMenu('breakfast')">BREAKFAST</div>
+            <div class="menu-options" onclick="toggleMenu('lunch')">LUNCH MENU</div>
+            <div class="menu-options" onclick="toggleMenu('chartreuse')">CHARTREUSE PLATTER</div>
+            <div class="menu-options" onclick="toggleMenu('negronisessions')">NEGRONI SESSIONS</div>
+            <div class="menu-options" onclick="toggleMenu('drinks')">DRINKS</div>
+            <div class="menu-options" onclick="toggleMenu('bytheglass')">BY THE GLASS</div>
+            <div class="menu-options" onclick="toggleMenu('winebythebottle')">WINE BY THE BOTTLE</div>
+            <div class="menu-options" onclick="toggleMenu('kidsmenu')">KIDS MENU</div>
+            <div class="menu-options" onclick="toggleMenu('adl')">ADL STRATEGIC PLANNING & PERSONALIZATION</div>
+            <div class="menu-options" onclick="toggleMenu('specialeventsmenu')">SPECIAL EVENTS MENU</div>
+            <div class="menu-options" onclick="toggleMenu('specialeventsbrunch')">SPECIAL EVENTS BRUNCH</div>
+        </div>
     </div>
-    <h1 style="text-align: center;">FOLLOW US</h1>
-    <div class="welcome-gallery-div">
+    <p style="text-align: center; font-family: 'Resamitz'; margin-bottom: 2em;" id="menutimes">Saturday, Sunday & public holidays served from 10am - 4pm</p>
+    <div class="menu" id="breakfast">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">BREAKFAST</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">SMOKED SALMON BENEDICT</p>
+        <p class="menu-item-description">Serve with a side of crispy hash browns or roasted baby potatoes.</p>
+
+        <p class="menu-item-title">AVOCADO TOAST WITH POACHED EGGS</p>
+        <p class="menu-item-description">Offer a side of mixed greens or a small fruit salad.</p>
+
+        <p class="menu-item-title">BRIOCHE FRENCH TOAST</p>
+        <p class="menu-item-description">Accompany with a side of thick-cut bacon or maple-glazed sausages.</p>
+
+        <p class="menu-item-title">TRUFFLE SCRAMBLED EGGS</p>
+        <p class="menu-item-description">Pair with a side of grilled asparagus or roasted cherry tomatoes.</p>
+
+        <p class="menu-item-title">QUINOA BREAKFAST BOWL</p>
+        <p class="menu-item-description">Serve with a side of Greek yogurt and a selection of granola, nuts, and seeds for guests to customize their bowl.</p>
+
+        <p class="menu-item-title">EGGS BENEDICT FLORENTINE</p>
+        <p class="menu-item-description">A vegetarian twist on the classic, featuring sautéed spinach and hollandaise sauce. Serve with a side of crispy hash browns or a mixed green salad.</p>
+
+        <p class="menu-item-title">BREAKFAST BURRITO</p>
+        <p class="menu-item-description">Filled with scrambled eggs, cheese, sautéed vegetables, and your choice of bacon, sausage, or tofu. Offer a side of salsa, guacamole, and sour cream, as well as a side of breakfast potatoes or seasoned black beans.</p>
+
+        <p class="menu-item-title">BELGIAN WAFFLES</p>
+        <p class="menu-item-description">Accompany with a selection of fresh berries, whipped cream, and maple syrup. You can also offer a side of crispy bacon or breakfast sausages.</p>
+
+        <p class="menu-item-title">OMELETTE OF THE DAY</p>
+        <p class="menu-item-description">Each day, feature a different omelette filling such as mushroom and gruyere, ham and cheese, or Mediterranean-style with tomatoes and feta. Serve with a side of home fries or a mixed green salad.</p>
+
+        <p class="menu-item-title">BREAKFAST QUICHE</p>
+        <p class="menu-item-description">Offer a variety of quiches, such as spinach and feta, bacon and cheddar, or roasted vegetable. Serve with a side of mixed greens and a choice of vinaigrette dressing. bread basket with a variety of freshly baked bread, including sourdough, whole wheat, and gluten-free options, served with butter, jam, and honey. Extras</p>
+
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">EXTRAS</h1>
+            <div class="title-underline"></div>
+        </div>
+
+        <p class="menu-item-title">SAUSAGES</p>
+        <p class="menu-item-description">a variety of sausages such as classic pork, chicken, turkey, or vegetarian options like plant-based sausages. Include choices like links, patties, or bratwursts.</p>
+        
+        <p class="menu-item-title">BACON</p>
+        <p class="menu-item-description">Serve crispy bacon strips or thick-cut bacon for those who enjoy this breakfast staple. Consider options like regular, smoked, or maple-flavored bacon.</p>
+
+        <p class="menu-item-title">HAM</p>
+        <p class="menu-item-description">Add slices of juicy ham to your menu, whether it's honey-glazed, smoked, or Black Forest ham. Offer it as a side or incorporate it into breakfast sandwiches or omelets.</p>
+
+        <p class="menu-item-title">CORNED BEEF HASH</p>
+        <p class="menu-item-description">A classic breakfast add-on made with diced corned beef mixed with potatoes, onions, and spices. Served crispy and golden brown.</p>
+
+        <p class="menu-item-title">GRILLED TOMATOES</p>
+        <p class="menu-item-description">Offer grilled tomato halves seasoned with herbs or spices as a healthy and flavorful addition to any breakfast plate.</p>
+
+        <p class="menu-item-title">MUSHROOMS</p>
+        <p class="menu-item-description">Offer grilled tomato halves seasoned with herbs or spices as a healthy and flavorful addition to any breakfast plate.</p>
+
+        <p class="menu-item-title">BAKED BEANS</p>
+        <p class="menu-item-description">Add a British touch to your breakfast menu with a side of savory baked beans cooked with tomato sauce, spices, and sometimes bacon or sausage.</p>
+
+        <p class="menu-item-title">HASH BROWNS</p>
+        <p class="menu-item-description">Crispy and golden shredded or diced potatoes seasoned with herbs or spices. Offer options like classic hash browns, loaded with cheese and bacon, or sweet potato hash browns.</p>
+
+        <p class="menu-item-title">TOAST</p>
+        <p class="menu-item-description">Provide a choice of bread for toasting, such as white, whole wheat, sourdough, or rye. Offer a selection of spreads like butter, jam, peanut butter, or Nutella.</p>
+
+        <p class="menu-item-title">EXTRA EGGS</p>
+        <p class="menu-item-description">Allow customers to add additional eggs to their breakfast orders, whether it's fried, scrambled, poached, or an egg white option.</p>
+    </div>
+    <div class="menu hidden" id="lunch">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">LUNCH MENU</h1>
+            <div class="title-underline"></div>
+        </div>
+
+        <p class="menu-item-title">QUINOA SALAD WITH GRILLED VEGETABLES AND LEMON VINAIGRETTE <img src="./images/arrow-right.png" alt="arrow-right" style="height: 0.8em;"> KES 1000</p>
+        <p class="menu-item-description">A light and refreshing salad with a mix of grilled vegetables, flavorful quinoa, and a tangy lemon vinaigrette.</p>
+
+        <p class="menu-item-title">GRILLED CHICKEN AND AVOCADO WRAP WITH CHIPOTLE AIOLI <img src="./images/arrow-right.png" alt="arrow-right" style="height: 0.8em;"> KES 1200</p>
+        <p class="menu-item-description">A delicious wrap filled with grilled chicken, creamy avocado slices, and a spicy chipotle aioli for an added kick.</p>
+
+        <p class="menu-item-title">SMOKED SALMON AND ARUGULA FLATBREAD <img src="./images/arrow-right.png" alt="arrow-right" style="height: 0.8em;"> KES 980</p>
+        <p class="menu-item-description">A thin and crispy flatbread topped with smoked salmon, fresh arugula, and a drizzle of lemon dill sauce.</p>
+
+        <p class="menu-item-title">TRUFFLE MUSHROOM RISOTTO <img src="./images/arrow-right.png" alt="arrow-right" style="height: 0.8em;"> KES 1300</p>
+        <p class="menu-item-description">Creamy and decadent risotto cooked with earthy truffle mushrooms, Parmesan cheese, and finished with a touch of truffle oil.</p>
+
+        <p class="menu-item-title">CAPRESE PANINI WITH BALSAMIC GLAZE <img src="./images/arrow-right.png" alt="arrow-right" style="height: 0.8em;"> KES 2100</p>
+        <p class="menu-item-description">A gourmet twist on a classic Caprese salad, this panini features fresh mozzarella, ripe tomatoes, basil leaves, and a drizzle of balsamic glaze, all pressed between two crusty slices of bread.</p>
+
+        <p class="menu-item-title">VEGAN BUDDHA BOWL WITH ROASTED CHICKPEAS AND TAHINI DRESSING <img src="./images/arrow-right.png" alt="arrow-right" style="height: 0.8em;"> KES 1000</p>
+        <p class="menu-item-description">A nourishing bowl filled with roasted chickpeas, quinoa, mixed greens, colorful roasted vegetables, and drizzled with a creamy tahini dressing.</p>
+
+        <p class="menu-item-title">GRILLED SHRIMP AND MANGO SALAD WITH CITRUS DRESSING <img src="./images/arrow-right.png" alt="arrow-right" style="height: 0.8em;"> KES 1250</p>
+        <p class="menu-item-description">A vibrant salad combining grilled shrimp, juicy mango slices, mixed greens, and a tangy citrus dressing for a burst of flavors.</p>
+
+        <p class="menu-item-title">LOBSTER ROLL WITH LEMON HERB BUTTER <img src="./images/arrow-right.png" alt="arrow-right" style="height: 0.8em;"> KES 1500</p>
+        <p class="menu-item-description">A luxurious lobster roll filled with succulent lobster meat tossed in a lemon herb butter, served in a buttery toasted bun.</p>
+
+        <p class="menu-item-title">BEEF TENDERLOIN SLIDERS WITH CARAMELISED ONIONS AND GORGONZOLA <img src="./images/arrow-right.png" alt="arrow-right" style="height: 0.8em;"> KES 3000</p>
+        <p class="menu-item-description">Mini beef tenderloin sliders topped with sweet caramelized onions, melted Gorgonzola cheese, and served on soft brioche buns.</p>
+
+        <p class="menu-item-title">MEDITERRANEAN MEZZE PLATTER <img src="./images/arrow-right.png" alt="arrow-right" style="height: 0.8em;"> KES 2200</p>
+        <p class="menu-item-description">A beautifully curated platter featuring an assortment of Mediterranean dips like hummus, baba ganoush, tzatziki, along with olives, roasted red peppers, grilled pita bread, and marinated feta cheese.</p>
+    </div>
+    <div class="menu hidden" id="chartreuse">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">CHARTREUSE PLATTER</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">SEAFOOD CHARTREUSE</p>
+        <p class="menu-item-description">
+            Lobster and Asparagus Patty Chartreuse with buttery lobster chunks, fresh asparagus, and a delicate beurre blanc 
+            sauce. Smoked Salmon Roulade filled with herbed cream cheese and served with a dill-infused crème fraîche. Scallop 
+            and Chorizo Skewers featuring seared scallops, spicy chorizo, and a tangy lemon aioli.Oysters Rockefeller with 
+            plump oysters topped with a rich spinach and bacon mixture, baked to perfection.Tuna Tartare with diced fresh 
+            tuna, avocado, sesame oil, and a hint of spice, served on crisp cucumber slices.
+        </p>
+        
+        <p class="menu-item-title">VEGETERIAN CHARTREUSE</p>
+        <p class="menu-item-description">
+            Roasted Vegetable Strudel with layers of roasted bell peppers, zucchini, eggplant, and feta cheese, wrapped in flaky phyllo pastry.
+            Stuffed Portobello Mushrooms filled with a savory mixture of breadcrumbs, cheese, herbs, and roasted garlic.
+            Caprese Skewers featuring cherry tomatoes, fresh mozzarella balls, and basil leaves, drizzled with balsamic glaze.
+            Grilled Halloumi and Vegetable Skewers with chunks of grilled halloumi cheese, bell peppers, zucchini, and red onion, served with a lemon-herb dressing.
+            Truffled Mushroom Crostini topped with sautéed mushrooms, truffle oil, and shaved Parmesan cheese on toasted baguette slices.
+         </p>
+
+        <p class="menu-item-title">MEAT LOVER'S CHARTREUSE</p>
+        <p class="menu-item-description">
+            Duck Confit Spring Rolls with tender duck confit, Asian vegetables, and hoisin dipping sauce.
+            Beef Wellington Bites featuring bite-sized portions of tender beef filet wrapped in puff pastry with a layer of mushroom duxelles.
+            Lamb Kofta Skewers with flavorful ground lamb mixed with spices, grilled and served with a tangy tzatziki sauce.
+            Chicken Liver Pâté with crusty bread and an assortment of pickles and chutneys.
+            Prosciutto-Wrapped Asparagus with thin slices of salty prosciutto enveloping crisp asparagus spears.
+         </p>
+
+        <p class="menu-item-title">CHEESE CHARTREUSE</p>
+        <p class="menu-item-description">
+            Aged Gouda with its rich, nutty flavor and firm texture.
+            Creamy Camembert with its soft, bloomy rind and buttery interior.
+            Pungent Roquefort with its distinct blue veining and tangy taste.
+            Smoked Cheddar with a smoky aroma and sharp flavor.
+            Creamy Goat Cheese rolled in herbs and edible flowers for a visually appealing presentation.
+         </p>
+    </div>
+    <div class="menu hidden" id="negronisessions">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">NEGRONI SESSIONS</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="drinks">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">DRINKS</h1>
+            <div class="title-underline"></div>
+        </div>
+
+        <p class="menu-item-title">HOT BEVERAGES</p>
+        <p class="menu-item-description">Coffee</p>
+        <p class="menu-item-description">Ristretto</p>
+        <p class="menu-item-description">Espresso</p>
+        <p class="menu-item-description">Picollo</p>
+        <p class="menu-item-description">Macciatto</p>
+        <p class="menu-item-description">Latte</p>
+        <p class="menu-item-description">Cappuccino</p>
+        <p class="menu-item-description">Hot chocolate <br><br><span style="font-size: 0.7em;">Extra shot</span> <br><span style="font-size: 0.7em;">Skim</span> <br><span style="font-size: 0.7em;">Almond</span> <br><span style="font-size: 0.7em;">Oat</span> <br></p>
+        <p class="menu-item-description">Camel</p>
+        <p class="menu-item-description">Tea <br><br><span style="font-size: 0.7em;">Hibiscus</span> <br><span style="font-size: 0.7em;">Camomile</span> <br><span style="font-size: 0.7em;">Black</span> <br><span style="font-size: 0.7em;">Masala</span> <br><span style="font-size: 0.7em;">Pepermint</span> <br><span style="font-size: 0.7em;">Purple</span></p>
+        <p class="menu-item-description"></p>
+        <p class="menu-item-description"></p>
+        <p class="menu-item-description"></p>
+        <p class="menu-item-description"></p>
+        <p class="menu-item-description"></p>
+    </div>
+    <div class="menu hidden" id="bytheglass">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">BY THE GLASS</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="winebythebottle">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">WINE BY THE BOTTLE</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="kidsmenu">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">KIDS MENU</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="adl">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">ADL STRATEGIC PLANNING & PERSONALIZATION</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="specialeventsmenu">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">SPECIAL EVENTS MENU</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <div class="menu hidden" id="specialeventsbrunch">
+        <div class="title-div">
+            <h1 style="margin-bottom: 5px;">SPECIAL EVENTS BRUNCH</h1>
+            <div class="title-underline"></div>
+        </div>
+        <p class="menu-item-title">DANTE’S GARIBALDI</p>
+        <p class="menu-item-description">campari & fluffy orange 15</p>
+
+        <p class="menu-item-title">SEASONAL BELLINI</p>
+        <p class="menu-item-description">frutti di bosco puree. rosé. prosecco. rose water spray 16</p>
+
+        <p class="menu-item-title">AMALFI LIMONATA</p>
+        <p class="menu-item-description">malfy lemon gin. limoncello. lemon curd. lemon juice. limonata soda 19</p>
+
+        <p class="menu-item-title">SALTY DOG</p>
+        <p class="menu-item-description">absolut. fluffy pink grapefruit. salted rosemary. black lava salt 15</p>
+
+        <p class="menu-item-title">COLD PRESSED BLOODY MARY</p>
+        <p class="menu-item-description">grey goose. cold pressed vegetables. fennel salt. fresh horseradish. pickles 19</p>
+
+        <p class="menu-item-title">BREAKFAST MARTINI</p>
+        <p class="menu-item-description">brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus 17</p>
+    </div>
+    <!-- <h1 style="text-align: center;">FOLLOW US</h1> -->
+    <!-- <div class="welcome-gallery-div">
         <div class="welcome-gallery">
             <img src="./images/index/welcome1.avif" alt="" style="width: 100%; margin-bottom: 1em;">
             <img src="./images/index/welcome3.avif" alt="" style="width: 100%; margin-bottom: 1em;">
@@ -78,6 +424,50 @@
             <img src="./images/index/welcome12.avif" alt="" style="width: 100%; margin-bottom: 1em;">
             <img src="./images/index/welcome14.avif" alt="" style="width: 100%; margin-bottom: 1em;">
         </div>
-    </div>
+    </div> -->
+    <script>
+        carousel = document.getElementById("carousel")
+        carouselPosition = 1
+    
+        function carouselAdd() {
+            carouselPosition += 1
+            if (carouselPosition > 11){
+                carouselPosition = 1
+            }
+            if (carouselPosition % 3 === 0) {
+                carousel.style.backgroundImage = "url('./logos/logo.png')"
+                carousel.style.backgroundSize = "contain"
+            } else {
+                carousel.style.backgroundImage = `url('./images/carousel${carouselPosition}.avif')`
+                carousel.style.backgroundSize = "cover"
+            }
+        }
+    
+        function carouselSub() {
+            carouselPosition -= 1
+            if (carouselPosition < 1) {
+                carouselPosition = 11
+            }
+            if (carouselPosition % 3 === 0) {
+                carousel.style.backgroundImage = "url('./logos/logo.png')"
+                carousel.style.backgroundSize = "contain"
+            } else {
+                carousel.style.backgroundImage = `url('./images/carousel${carouselPosition}.avif')`
+                carousel.style.backgroundSize = "cover"
+            }
+        }
+    
+        function toggleMenu(menuid) {
+            menu = document.getElementsByClassName("menu")
+            for (let x = 0; x < menu.length; x++) {
+                if (menu[x].getAttribute("id") === menuid) {
+                    menu[x].classList.remove("hidden")
+                } else {
+                    menu[x].classList.add("hidden")
+                }
+            }
+            window.location.href = "#menutimes"
+        }
+    </script>
 </body>
 </html>
