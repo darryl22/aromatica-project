@@ -23,12 +23,20 @@ body{
     height: 4em;
 }
 
+.burgerbar{
+    height: 2em;
+}
+
+.burgerbar:hover{
+    cursor: pointer;
+}
+
 .navbar{
-    background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
+    background-color: black;
+    position: sticky;
     width: 100%;
     top: 0;
-    padding: 1em;
+    padding: 0.5em 1em;
     display: flex;
     align-items: center;
     box-shadow: 0px 25px 25px black inset;
@@ -36,15 +44,29 @@ body{
     z-index: 2;
 }
 
+.navdropdown-container{
+    position: relative;
+}
+
+.navdropdown{
+    position: absolute;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    transform: translate(-76%, 24px);
+}
+
 .bottom-nav{
     position: fixed;
     bottom: 0;
-    padding: 1em;
+    /* padding: 1em; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: black;
     width: 100%;
+    z-index: 3;
 }
 
 .nav-link{
@@ -53,80 +75,63 @@ body{
     padding: 1em 0.7em;
 }
 
-.carousel{
+.carousel-image{
     width: 100%;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    font-size: 2em;
-    /* padding: 0em 1em; */
-    box-shadow: 0px -10px 15px black inset;
-    transition: background-image 300ms ease-in-out;
+    background-size: cover;
+    height: 80vh;
 }
 
-.carousel-arrow{
-    width: 2em;
-    transform: scaleX(0.6);
-    z-index: 1;
-}
-
-.carousel-arrow:hover{
-    cursor: pointer;
-}
-
-.menu-options-container{
+.menu-div{
     width: 80%;
     margin: auto;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3em;
-    margin-bottom: 2em;
 }
 
-.menu-options-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.menu-title{
+    background-color: gold;
+    text-align: center;
+    padding: 1em 0em;
+    margin-top: 1em
 }
 
-.menu-options{
+.menu-section-div{
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.menu-section{
     border: 1px solid white;
-    padding: 0px 10px;
-    padding-top: 3px;
-    padding-bottom: 4px;
-    width: fit-content;
-    margin: 10px;
-    letter-spacing: 2px;
-    transition: 300ms;
+    flex: 1;
+    padding: 0.5em;
+    height: fit-content;
 }
 
-.menu-options:hover{
-    background-color: white;
-    color: black;
-    cursor: pointer;
-}
-
-.menu{
-    width: 70%;
-    margin: auto;
-    border: 4px solid white;
-    outline: 2px solid white;
-    outline-offset: 3px;
-    margin-bottom: 6em;
+.menu-item-head{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1em;
+    justify-content: space-between;
+    font-size: 1.4em;
+}
+
+.menu-item-desc{
+    border-bottom: 1px solid gray;
+    font-family: Resamitz;
+    padding-bottom: 1em;
 }
 
 .hidden{
     display: none;
+}
+
+.scrollhide{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
+}
+
+.scrollhide.active{
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .doubleborder{
@@ -149,16 +154,46 @@ body{
     margin-bottom: 1em;
 }
 
-.menu-item-title{
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
-    padding: 0;
+.menu-options-div{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    margin-top: 4em;
+    margin-bottom: 2em;
 }
 
-.menu-item-description{
-    font-family: "Resamitz";
-    margin-top: 0px;
-    margin-bottom: 1.5em;
-    padding: 0;
+.menu-options{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex: 1;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.menu-options-link{
+    color: white;
     text-align: center;
+    text-decoration: none;
+}
+
+.menu-options-link:hover{
+    color: white;
+}
+
+.workwithus{
+    border: 1px solid white;
+    display: flex;
+    width: 50%;
+    margin: 2em;
+}
+
+.workwithus-image{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    width: 400px;
 }

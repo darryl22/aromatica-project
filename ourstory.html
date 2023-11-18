@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./index.css">
     <title>Document</title>
 
@@ -29,15 +31,16 @@
 <body>
     <div class="navbar">
         <img src="./logos/logo.png" alt="logo" class="nav-logo">
-        <div>
-            <a href="./index.html" class="nav-link">WELCOME</a>
-            <a href="./ourstory.html" class="nav-link">OUR STORY</a>
-            <a href="./locations.html" class="nav-link">HOURS & LOCATIONS</a>
-            <a href="./menu.html" class="nav-link">NAIROWUA MENU</a>
-            <a href="./reservations.html" class="nav-link">RESERVATIONS</a>
-            <a href="./store.html" class="nav-link">STORE</a>
-            <a href="./giftcards.html" class="nav-link">GIFT CARDS</a>
-            <a href="#" class="nav-link">AROMATICA BEVERLY HILLS</a>
+        <div class="navdropdown-container">
+            <img src="./logos/burger-bar.png" alt="burgerbar" class="burgerbar" id="burgerbar" onclick="toggleDropdown()">
+            <div class="navdropdown hidden" id="navdropdown">
+                <a href="./index.html" class="nav-link">HOME</a>
+                <a href="./ourstory.html" class="nav-link">OUR STORY</a>
+                <a href="./locations.html" class="nav-link">HOURS & LOCATIONS</a>
+                <a href="./reservations.html" class="nav-link">RESERVATIONS</a>
+                <a href="./store.html" class="nav-link">STORE</a>
+                <a href="./giftcards.html" class="nav-link">GIFT CARDS</a>
+            </div>
         </div>
     </div>
     <div class="bottom-nav">
@@ -46,26 +49,41 @@
             <img src="./logos/instagram.png" alt="instagram" style="height: 1.2em; margin-left: 1em;">
             <img src="./logos/spotify.png" alt="spotify" style="height: 1.2em; margin-left: 1em;">
         </div>
-        <div>
-            <a href="#" class="nav-link">BRING DANTE HOME</a>
-            <a href="#" class="nav-link">COLLABORATIONS</a>
+        <div style="display: flex; align-items: center;">
+            <a href="./workwithus.html" class="nav-link">WORK WITH US</a>
             <a href="#" class="nav-link">POP-UPS</a>
             <a href="#" class="nav-link">PRESS</a>
             <a href="#" class="nav-link">CONTACTS</a>
             <a href="#" class="nav-link">EVENTS</a>
-            <a href="#" class="nav-link">WORK WITH US</a>
         </div>
     </div>
-    <div class="carousel" id="carousel" style="background-image: url('./images/ourstory/carousel1.avif');">
-        <div class="carousel-arrow" onclick="carouselSub()"><img src="./images/arrow-left.png" alt="leftarrow" style="height: 2em;"></div>
-        <div class="carousel-arrow" onclick="carouselAdd()"><img src="./images/arrow-right.png" alt="rightarrow" style="height: 2em;"></div>
+    <div class="carousel slide" id="ourstoryCarousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-image" style="background-image: url('./images/ourstory/carousel1.avif');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('./images/ourstory/carousel2.avif');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('./images/ourstory/carousel3.avif');"></div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#ourstoryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#ourstoryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div style="width: 40%; margin: auto; margin-bottom: 4em;">
+    <div style="width: 40%; margin: auto; margin-bottom: 4em;" class="scrollhide">
         <h1 style="margin-top: 2em; text-align: center;">OUR STORY</h1>
         <p style="text-align: center; font-family: 'Resamitz';">"Dante, one of Greenwich Village’s most beloved stomping grounds, has undergone a transformation 104 years in the making. Its latest incarnation: the world’s best bar."</p>
         <p style="margin-top: 1em; font-family: 'Resamitz'; text-align: center;">Time Out,  4th October  2019</p>
     </div>
-    <div style="display: flex;">
+    <div style="display: flex;" class="scrollhide">
         <div class="doubleborder" style="width: 40%; margin: 2em;">
             <p style="font-family: 'Resamitz'; text-align: center;">
                 Dante has been a beacon for the community of Greenwich Village since it opened its doors in 1915. 
@@ -100,7 +118,7 @@
             from the global ingredients that New Yorkers have learned to love and seek out.
         </p>
     </div>
-    <div style="display: flex; margin-bottom: 4em;">
+    <div style="display: flex; margin-bottom: 4em;" class="scrollhide">
         <div class="story-image" style="background-image: url('./images/ourstory/carousel2.avif'); box-shadow: -15px 0px 15px black inset;"></div>
         <div class="doubleborder" style="width: 40%; margin: 2em;">
             <p style="font-family: 'Resamitz'; text-align: center;">
@@ -114,41 +132,59 @@
     </div>
     <div class="ourstory-gallery-div">
         <div class="ourstory-gallery">
-            <img src="./images/ourstory/ourstory1.avif" alt="" style="width: 100%; margin-bottom: 1em;">
-            <img src="./images/ourstory/ourstory3.avif" alt="" style="width: 100%; margin-bottom: 1em;">
-            <img src="./images/ourstory/ourstory5.avif" alt="" style="width: 100%; margin-bottom: 1em;">
-            <img src="./images/ourstory/ourstory7.avif" alt="" style="width: 100%; margin-bottom: 1em;">
-            <img src="./images/ourstory/ourstory9.avif" alt="" style="width: 100%; margin-bottom: 1em;">
-            <img src="./images/ourstory/ourstory11.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/ourstory/ourstory1.avif" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/ourstory3.avif" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/ourstory5.avif" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/ourstory7.avif" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/ourstory9.avif" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/ourstory11.avif" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
         </div>
         <div class="ourstory-gallery">
-            <img src="./images/ourstory/ourstory2.avif" alt="" style="width: 100%; margin-bottom: 1em;">
-            <img src="./images/ourstory/ourstory4.avif" alt="" style="width: 100%; margin-bottom: 1em;">
-            <img src="./images/ourstory/ourstory6.avif" alt="" style="width: 100%; margin-bottom: 1em;">
-            <img src="./images/ourstory/ourstory8.avif" alt="" style="width: 100%; margin-bottom: 1em;">
-            <img src="./images/ourstory/ourstory10.avif" alt="" style="width: 100%; margin-bottom: 1em;">
-            <img src="./images/ourstory/ourstory12.avif" alt="" style="width: 100%; margin-bottom: 1em;">
+            <img src="./images/ourstory/ourstory2.avif" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/ourstory4.avif" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/ourstory6.avif" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/ourstory8.avif" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/ourstory10.avif" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/ourstory12.avif" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
         </div>
     </div>
 </body>
 <script>
     carousel = document.getElementById("carousel")
     carouselPosition = 1
+    navdropdown = document.getElementById("navdropdown")
 
-    function carouselAdd() {
-        carouselPosition += 1
-        if (carouselPosition > 3){
-            carouselPosition = 1
-        }
-        carousel.style.backgroundImage = `url('./images/ourstory/carousel${carouselPosition}.avif')`
+    const throttle = (fn, delay) => { 
+        let time = Date.now(); 
+        return () => { 
+            if((time + delay - Date.now()) <= 0) { 
+                fn(); 
+                time = Date.now(); 
+            } 
+        } 
     }
 
-    function carouselSub() {
-        carouselPosition -= 1
-        if (carouselPosition < 1) {
-            carouselPosition = 3
-        }
-        carousel.style.backgroundImage = `url('./images/ourstory/carousel${carouselPosition}.avif')`
+    function toggleDropdown() {
+        navdropdown.classList.toggle("hidden")
     }
+
+    function reveal() {
+        let scrollhide = document.querySelectorAll(".scrollhide")
+
+        for (let x = 0; x < scrollhide.length; x++) {
+            let windowheight = window.innerHeight
+            let elementTop = scrollhide[x].getBoundingClientRect().top
+            let elementBottom = scrollhide[x].getBoundingClientRect().bottom
+            let visible = 150
+
+            if (elementTop < windowheight - visible) {
+                scrollhide[x].classList.add("active")
+            } else {
+                scrollhide[x].classList.remove("active")
+            }
+        }
+    }
+
+    window.addEventListener("scroll", throttle(reveal, 100))
 </script>
 </html>

@@ -9,16 +9,38 @@
 <body>
     <div class="navbar">
         <img src="./logos/logo.png" alt="logo" class="nav-logo">
+        <div class="navdropdown-container">
+            <img src="./logos/burger-bar.png" alt="burgerbar" class="burgerbar" id="burgerbar" onclick="toggleDropdown()">
+            <div class="navdropdown hidden" id="navdropdown">
+                <a href="./index.html" class="nav-link">HOME</a>
+                <a href="./ourstory.html" class="nav-link">OUR STORY</a>
+                <a href="./locations.html" class="nav-link">HOURS & LOCATIONS</a>
+                <a href="./reservations.html" class="nav-link">RESERVATIONS</a>
+                <a href="./store.html" class="nav-link">STORE</a>
+                <a href="./giftcards.html" class="nav-link">GIFT CARDS</a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav">
         <div>
-            <a href="./index.html" class="nav-link">WELCOME</a>
-            <a href="./ourstory.html" class="nav-link">OUR STORY</a>
-            <a href="./locations.html" class="nav-link">HOURS & LOCATIONS</a>
-            <a href="./menu.html" class="nav-link">NAIROWUA MENU</a>
-            <a href="./reservations.html" class="nav-link">RESERVATIONS</a>
-            <a href="./store.html" class="nav-link">STORE</a>
-            <a href="./giftcards.html" class="nav-link">GIFT CARDS</a>
-            <a href="#" class="nav-link">AROMATICA BEVERLY HILLS</a>
+            <img src="./logos/facebook-app-symbol.png" alt="facebook" style="height: 1.2em; margin-left: 1em;">
+            <img src="./logos/instagram.png" alt="instagram" style="height: 1.2em; margin-left: 1em;">
+            <img src="./logos/spotify.png" alt="spotify" style="height: 1.2em; margin-left: 1em;">
+        </div>
+        <div style="display: flex; align-items: center;">
+            <a href="./workwithus.html" class="nav-link">WORK WITH US</a>
+            <a href="#" class="nav-link">POP-UPS</a>
+            <a href="#" class="nav-link">PRESS</a>
+            <a href="#" class="nav-link">CONTACTS</a>
+            <a href="#" class="nav-link">EVENTS</a>
         </div>
     </div>
 </body>
+<script>
+    navdropdown = document.getElementById("navdropdown")
+
+    function toggleDropdown() {
+        navdropdown.classList.toggle("hidden")
+    }
+</script>
 </html>
