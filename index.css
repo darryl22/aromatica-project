@@ -21,6 +21,7 @@ body{
 }
 .nav-logo{
     height: 4em;
+    transform: translateX(-70px);
 }
 
 .burgerbar{
@@ -79,12 +80,14 @@ body{
     width: 100%;
     background-position: center;
     background-size: cover;
-    height: 80vh;
+    background-repeat: no-repeat;
+    height: 90vh;
 }
 
 .menu-div{
     width: 80%;
     margin: auto;
+    margin-top: 4em;
 }
 
 .menu-title{
@@ -107,16 +110,30 @@ body{
     height: fit-content;
 }
 
-.menu-item-head{
+.menu-item-head, .menu-item-head2{
     display: flex;
     justify-content: space-between;
     font-size: 1.4em;
+}
+
+.menu-item-head2{
+    margin-top: 1em;
+}
+
+.menu-item-head2 p{
+    margin-bottom: 0px;
 }
 
 .menu-item-desc{
     border-bottom: 1px solid gray;
     font-family: Resamitz;
     padding-bottom: 1em;
+}
+
+.menu-item-desc2{
+    font-family: Resamitz;
+    margin: 0;
+    padding-bottom: 0.5em;
 }
 
 .hidden{
@@ -154,12 +171,22 @@ body{
     margin-bottom: 1em;
 }
 
+.droparrow{
+    transform: rotate(-90deg);
+    height: 1em;
+}
+
+.flip{
+    transform: rotate(90deg);
+}
+
 .menu-options-div{
     display: flex;
     width: 70%;
     margin: auto;
-    margin-top: 4em;
-    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    gap: 1em;
 }
 
 .menu-options{
@@ -167,7 +194,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     flex: 1;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 4 / 3;
     display: flex;
     align-items: end;
     justify-content: center;
@@ -177,6 +204,11 @@ body{
     color: white;
     text-align: center;
     text-decoration: none;
+    flex: 1;
+}
+
+.menu-options-title{
+    font-size: 2em;
 }
 
 .menu-options-link:hover{
@@ -196,4 +228,14 @@ body{
     background-repeat: no-repeat;
     aspect-ratio: 1 / 1;
     width: 400px;
+}
+
+@media screen and (max-width: 900px) {
+    .menu-section-div{
+        flex-direction: column;
+    }
+
+    .menu-options-title{
+        font-size: 1em;
+    }
 }
